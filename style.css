@@ -1,0 +1,193 @@
+body {
+    background-color: #fdf6e4; 
+    font-family: 'VT323', monospace; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #585858;
+}
+
+.diary-container {
+    background-color: #fffaf0; 
+    border: 2px solid #585858; 
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 5px 5px 0px #d3c7b1; 
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 2px solid #e7e0d4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #ff8b8b; 
+    font-size: 28px;
+    margin: 0;
+}
+
+#todo-form {
+    display: flex;
+    gap: 10px; 
+}
+
+#todo-input {
+    flex-grow: 1; 
+    background-color: #ffffff;
+    border: 2px solid #d3c7b1;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #585858;
+}
+
+#todo-input:focus {
+    outline: 2px solid #ff8b8b; 
+}
+
+#todo-form button {
+    background-color: #ff8b8b; 
+    color: white;
+    border: 2px solid #c76c6c;
+    padding: 10px 15px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#todo-form button:active {
+    transform: translateY(2px); 
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #e7e0d4;
+    font-size: 16px;
+    color: #a0937d;
+}
+
+.todo-item {
+    background-color: #fff;
+    border: 2px solid #e7e0d4;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer; 
+    user-select: none; /
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
+    color: #a0937d;
+    background-color: #f7f3e9;
+}
+
+/* Кнопка видалення */
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #ff8b8b;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.delete-btn:hover {
+    color: #c76c6c;
+}
+
+
+#help-btn {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    background-color: #a0937d;
+    color: white;
+    border: 2px solid #585858;
+    border-radius: 50%; 
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+#modal-overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#modal-overlay:not(.hidden) {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal {
+    background-color: #fffaf0;
+    border: 2px solid #585858;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 5px 5px 0px #333;
+    position: relative; 
+    text-align: center;
+}
+
+.modal h2 {
+    color: #ff8b8b;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.modal ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.modal .close-btn {
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    cursor: pointer;
+    color: #a0937d;
+}
+
+
+.hidden {
+    display: none;
+}

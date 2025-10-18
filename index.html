@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="diary-container">
+      <header class="header">
+        <h1>Мій To-Do List 📝</h1>
+      </header>
+
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Що плануємо робити?"
+          autocomplete="off"
+        />
+        <button type="submit">Додати</button>
+      </form>
+
+      <ul id="todo-list" class="todo-list"></ul>
+
+      <footer class="footer">
+        <button id="help-btn">?</button>
+        <p>© 2025 Ivan Bykov</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="modal-overlay" class="hidden">
+      <div class="modal">
+        <button class="close-btn">X</button>
+        <h2>Інструкція</h2>
+        <ul>
+          <li>Справи додаються та видаляються.</li>
+          <li>Видаляються по кліку на "Х".</li>
+          <li>Закреслюються по кліку на саму справу.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
