@@ -1,6 +1,6 @@
 # final-project
 
-# To-Do List 📝🗒️⏰
+# To-Do List 
 
 **Link:** https://ivanbykov811.github.io/final-project/
 
